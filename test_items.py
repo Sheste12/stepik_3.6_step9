@@ -8,7 +8,7 @@ import selenium
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
-def test_items(browser):
+def test_add_to_cart_button_is_displayed(browser):
     browser.get(link)
     # time.sleep(30)
     button = WDW(browser, 5).until(EC.visibility_of_all_elements_located( (By.CSS_SELECTOR, ".btn-add-to-basket") ))
