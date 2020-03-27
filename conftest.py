@@ -18,8 +18,8 @@ def browser(request):
         fp.set_preference("intl.accept_languages", browser_language)
         browser = webdriver.Firefox(firefox_profile=fp)
     else:
-        browser = webdriver.Chrome(options=opt)
         opt = Options()
+        browser = webdriver.Chrome(options=opt)
         opt.add_xexperimental_option("prefs", {'intl.accept_languages': browser_language})
     yield browser
     browser.quit()
