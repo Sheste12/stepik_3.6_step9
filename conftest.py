@@ -20,6 +20,6 @@ def browser(request):
     else:
         opt = Options()
         browser = webdriver.Chrome(options=opt)
-        opt.add_xexperimental_option("prefs", {'intl.accept_languages': browser_language})
+        opt.add_experimental_option("prefs", {'intl.accept_languages': browser_language})
     yield browser
     browser.quit()
