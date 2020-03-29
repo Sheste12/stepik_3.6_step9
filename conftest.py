@@ -19,7 +19,7 @@ def browser(request):
         browser = webdriver.Firefox(firefox_profile=fp)
     else:
         opt = Options()
-        browser = webdriver.Chrome(options=opt)
         opt.add_experimental_option("prefs", {'intl.accept_languages': browser_language})
+        browser = webdriver.Chrome(options=opt)
     yield browser
     browser.quit()
